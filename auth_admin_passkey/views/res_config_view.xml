@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+        <record id="view_res_config_settings" model="ir.ui.view">
+            <field name="name">res.config.settings.view</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="mail.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@id='mail_alias_domain']" position='after'>
+                    <group>
+                        <label for="id" string="Passkey"/>
+                        <div>
+                        <div>
+                            <field name="auth_admin_passkey_send_to_admin" class="oe_inline"/>
+                            <label for="auth_admin_passkey_send_to_admin"/>
+                        </div>
+                        <div>
+                            <field name="auth_admin_passkey_send_to_user" class="oe_inline"/>
+                            <label for="auth_admin_passkey_send_to_user"/>
+                        </div>
+                        </div>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+</odoo>
