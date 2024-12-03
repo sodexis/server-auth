@@ -11,5 +11,5 @@
     "website": "https://github.com/OCA/server-auth",
     "license": "AGPL-3",
     "depends": ["mail"],
-    "installable": False,
+    "installable": True,
 }

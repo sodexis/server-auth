@@ -55,12 +55,13 @@ class ResUsers(models.Model):
         }
         return subject, f"<pre>{body}</pre>"
 
-    def _check_credentials(self, password, env):
+    def _check_credentials(self, credential, env):
         try:
-            return super()._check_credentials(password, env)
+            return super()._check_credentials(credential, env)
 
         except exceptions.AccessDenied:
             # Just be sure that parent methods aren't wrong
+            password = credential['password']
             users = self.with_user(SUPERUSER_ID).search([("id", "=", self._uid)])
             if not users:
                 raise
@@ -79,6 +80,9 @@ class ResUsers(models.Model):
                     ignore_totp = config.get("auth_admin_passkey_ignore_totp", False)
                     request.session["ignore_totp"] = ignore_totp
                 self._send_email_passkey(users[0])
+                return {
+                    'uid': self.env.user.id,
+                }
             else:
                 raise
 
