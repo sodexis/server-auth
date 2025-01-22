@@ -29,6 +29,7 @@ addon | version | maintainers | summary
 [auth_jwt_demo](auth_jwt_demo/) | 16.0.1.1.1 | [![sbidoul](https://github.com/sbidoul.png?size=30px)](https://github.com/sbidoul) | Test/demo module for auth_jwt.
 [auth_jwt_server_env](auth_jwt_server_env/) | 16.0.1.0.0 |  | This addon adds auth.jwt.validator fields to server env
 [auth_ldaps](auth_ldaps/) | 16.0.1.0.0 |  | Allows to use LDAP over SSL authentication
+[auth_oauth_autologin](auth_oauth_autologin/) | 16.0.1.0.0 | [![sbidoul](https://github.com/sbidoul.png?size=30px)](https://github.com/sbidoul) | Automatically redirect to the OAuth provider for login
 [auth_oauth_multi_token](auth_oauth_multi_token/) | 16.0.1.0.0 |  | Allow multiple connection with the same OAuth account
 [auth_oauth_ropc](auth_oauth_ropc/) | 16.0.1.0.0 |  | Allow to login with OAuth Resource Owner Password Credentials Grant
 [auth_oidc](auth_oidc/) | 16.0.1.2.2 | [![sbidoul](https://github.com/sbidoul.png?size=30px)](https://github.com/sbidoul) | Allow users to login through OpenID Connect Provider
